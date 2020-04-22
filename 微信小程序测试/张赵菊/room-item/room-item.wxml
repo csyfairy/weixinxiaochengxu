@@ -1,0 +1,2 @@
+<!--pages/room-item/room-item.wxml-->
+<web-view src="{{roomUrl}}"></web-view>

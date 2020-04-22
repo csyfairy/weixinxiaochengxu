@@ -1,0 +1,36 @@
+/* component/my-room/my-room.wxss */
+
+.room-item{
+  width: 360rpx;
+  height: 260rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  display: inline-block;
+}
+.room-item:active{
+  opacity: 0.5;
+}
+.room-item image{
+  width: 100%;
+}
+
+.name{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.room-item .headImg{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 15rpx 6rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.lineBox{
+  display: flex;
+  justify-content: space-between;
+  font-size: 25rpx;
+  color: #666;
+  line-height: 80rpx;
+}

@@ -1,0 +1,84 @@
+map{
+  width: 100vw;
+  height: 100vh;
+}
+.posBtn{
+  position: absolute;
+  left: 30rpx;
+  top: 800rpx;
+  width: 100rpx;
+  height: 100rpx
+}
+.bigger{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 600rpx;
+  background-color:white;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 70rpx
+}
+.smaller{
+   width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 670rpx;
+  background-color:white;
+  font-size: 80rpx;
+  text-align: center;
+  line-height: 70rpx
+}
+.smaller:active,.bigger:active{
+  background-color: #eee
+}
+.traffic{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 300rpx
+}
+.mapInput{
+  position: absolute;
+  top: 50rpx
+}
+.input-view{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 460rpx;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+}
+.search-btn{
+  position: absolute;
+  top: 30rpx;
+  left: 560rpx;
+  width: 120rpx;
+  height: 80rpx;
+  background-color: #139dd1;
+  border-radius: 40rpx;
+  color: white;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  text-align: center
+}
+.mapInput{
+  position: absolute;
+  top: 500rpx;
+  background-color: red;
+  opacity: 0
+}
+.search-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx
+}

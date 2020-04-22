@@ -1,0 +1,46 @@
+/* pages/camera/camera.wxss */
+
+button {
+  width: 650rpx;
+  margin: 80rpx 50rpx 0;
+}
+
+camera {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.get-img-btn {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  /* cover-view 真机上不支持渐变 *//* background: radial-gradient(#fff, transparent); */
+  border: 10rpx solid #fff;
+  background-color: red;
+  position: fixed;
+  left: 325rpx;
+  bottom: 70rpx;
+  opacity: 0.8;
+}
+
+.get-img-btn:active {
+  opacity: 0.3;
+}
+
+cover-image {
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 90rpx;
+  left: 560rpx;
+  opacity: 0.6;
+}
+
+image {
+  width: 600rpx;
+  margin: 75rpx;
+}

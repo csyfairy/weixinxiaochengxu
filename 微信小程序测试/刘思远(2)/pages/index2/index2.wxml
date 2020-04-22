@@ -1,0 +1,17 @@
+<!--pages/index2/index2.wxml-->
+<text>pages/index2/index2.wxml</text>
+<view>
+  <!-- image标签是web中img和背景图结合体 -->
+  <image src="../../images/Aurora-1080.jpg" mode="aspectFit"></image>
+</view>
+<swiper autoplay indicator-dots indicator-color="skyblue" indicator-active-color="aqua" interval="1000" circular="true" duration="200" vertical="true" previous-margin="100px" next-margin="10px" display-multiple-items="2" easing-function="easeInCubic">
+  <swiper-item>
+    <image src="../../images/Aurora-1080.jpg"  mode="widthFix"></image>
+  </swiper-item>
+  <swiper-item>
+  <image src="../../images/Burner-1080.jpg" mode="widthFix"></image>
+  </swiper-item>
+  <swiper-item>
+  <image src="../../images/Explosion_1080.jpg" mode="widthFix"></image>
+  </swiper-item>
+</swiper>

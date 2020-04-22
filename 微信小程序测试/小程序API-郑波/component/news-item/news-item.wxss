@@ -1,0 +1,18 @@
+/* .past {
+  position: relative;
+  top: -30rpx;
+} */
+.date {
+  display: block;
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: white;
+  background-color: rgba(0, 0, 255, 0.884);
+  text-align: center;
+}
+
+.past .past-item{
+  display: block;
+}

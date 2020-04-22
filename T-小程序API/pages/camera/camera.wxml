@@ -1,0 +1,14 @@
+<!--pages/camera/camera.wxml-->
+<button type="primary" bindtap="getImage">上传图片</button>
+
+<!-- 使用相机标签显示相机 -->
+<camera wx:if="{{showCamera}}" device-position="{{cameraDirection}}">
+  <cover-view bindtap="makePhoto" class="get-img-btn"></cover-view>
+  <cover-image bindtap="changeCamera" src="/img/cameraChange.png"></cover-image>
+</camera>
+
+<!-- 保存照片的按钮 -->
+<button type="primary" bindtap="saveImage">保存图片</button>
+
+<!-- image标签显示拍摄的照片 -->
+<image mode="widthFix" src="{{photoPath}}"></image>

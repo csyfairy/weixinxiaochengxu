@@ -1,0 +1,7 @@
+<view>
+  <input placeholder="请输入二维码信息" bindinput="updateMsg"></input>
+  <button type="primary" bindtap="makeQrcode" bindmakeQrcode="">生成二维码</button>
+  <button type="primary" bindtap="scanQrcode">扫描二维码</button>
+  <view wx:if="{{codeInfo}}">{{codeInfo}}</view>
+  <canvas canvas-id="myQrcode" wx:if="{{showQrcode}}" bindlongtap="saveQrcode"></canvas>
+</view>

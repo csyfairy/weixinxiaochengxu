@@ -1,0 +1,58 @@
+/* component/zhihuItem/zhihuItem.wxss */
+
+switch, switch-item, image {
+  width: 100%;
+}
+
+.box {
+  position: relative;
+}
+
+.box .text {
+  width: 70%;
+  position: absolute;
+  color: white;
+  top: 200rpx;
+  left: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: e;
+}
+
+.ul {
+  width: 94%;
+  margin: auto;
+  padding: 17rpx;
+}
+
+.ul .li {
+  width: 100%;
+  height: 190rpx;
+  /* border: 1rpx solid; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.ul .li .left {
+  width: 26%;
+  height: 100%;
+}
+
+.ul li .left image {
+  width: 100%;
+  height: 100%;
+}
+
+.ul .li .right {
+  width: 70%;
+  line-height: 70rpx;
+}
+
+.title{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: #1B71C2;
+  color: white;
+}

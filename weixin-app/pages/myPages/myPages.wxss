@@ -1,0 +1,43 @@
+/* pages/myPages/myPages.wxss */
+
+image {
+  width: 250rpx;
+}
+
+camera {
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  top: 0;
+  color: white;
+}
+
+movable-area {
+  width: 600rpx;
+  height: 400rpx;
+  border: 1px solid;
+}
+
+movable-view {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: black;
+}
+
+scroll-view {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+scroll-view image {
+  width: 600rpx;
+  height: 600rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+.form-input{
+  border: 1px solid red;
+}

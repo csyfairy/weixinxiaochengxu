@@ -1,0 +1,9 @@
+<!--pages/media/video/video.wxml-->
+<video src="{{src}}" id="myVideo" danmu-list="{{danmuList}}" danmu-btn="{{true}}"></video>
+
+
+<button bindtap="getVideo" type="primary">选择视频</button>
+
+<input placeholder="请输入弹幕信息" bindblur="bindInputBlur" value="{{danmu}}"></input>
+<button bindtap="sendDanmu">发送弹幕</button>
+

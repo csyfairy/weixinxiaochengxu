@@ -1,0 +1,7 @@
+input{
+  border: 1px solid;
+}
+canvas{
+  width: 400px;
+  height: 200px
+}

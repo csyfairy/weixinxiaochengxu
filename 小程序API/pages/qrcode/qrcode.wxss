@@ -1,0 +1,28 @@
+/* pages/qrcode/qrcode.wxss */
+
+input {
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 75rpx;
+  padding-left: 10rpx;
+  border: 1rpx solid gray;
+  border-radius: 10rpx;
+}
+
+button {
+  width: 600rpx;
+  margin: 30rpx auto;
+}
+
+canvas {
+  width: 200px;
+  height: 200px;
+  /* border: 12px solid gainsboro; */
+  margin: 30px auto;
+}
+
+view {
+  text-align: center;
+  color: #aaa;
+}

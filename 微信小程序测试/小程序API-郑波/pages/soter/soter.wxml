@@ -1,0 +1,16 @@
+<!--pages/soter/soter.wxml-->
+<!-- 进行指纹生物验证的按钮 -->
+<button  class="enterBtn" type="primary" bindtap="startSoter" style="color:{{color}};background-color:{{bgc}}" wx:if="{{!showImage}}">{{title}}</button>
+
+<!-- 加密相册 -->
+<view wx:if="{{showImage}}" class="imgBox">
+<!-- 上传图片的按钮 -->
+   <button class="updataBtn" bindtap="updataBtn">上传图片</button>
+   <!-- 图片列表 -->
+   <image wx:for="{{photoPath}}" src="{{item}}" wx:key="index" mode="aspectFill"    bindtap="showBig" data-url="{{item}}"></image>
+</view>
+
+<!-- 大图展示的涂层 -->
+<view class="cover" wx:if="{{showpge}}" bindtap="hideBig">
+   <image mode="aspectFill" src="{{currentImgPath}}"></image>
+</view>

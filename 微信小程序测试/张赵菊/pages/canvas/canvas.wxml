@@ -1,0 +1,22 @@
+<!--pages/canvas/canvas.wxml-->
+<button type="primary" bindtap="drawLine">canvas画布</button>
+<button type="primary" bindtap="drawRect">canvas矩形</button>
+<button type="primary" bindtap="drawCircle">canvas圆弧</button>
+<button type="primary" bindtap="drawCurveBtn">canvas曲线</button>
+<button type="primary" bindtap="canvasText">canvas文字</button>
+
+<button type="primary" bindtap="drawImage">canvas图片</button>
+<button type="primary" bindtap="drawPolygon">canvas多边形</button>
+<slider wx:if="{{polygonSlider}}" bindchanging="polygonChange"  min="0" ></slider>
+<!-- 滑动条 -->
+<view wx:if="{{bezierSlider}}">
+<slider bindchanging="bezier1" min="30" max="500" value="40"></slider>
+<slider bindchanging="bezier2" min="30" max="500" value="300"></slider>
+<slider bindchanging="bezier3" min="30" max="500" value="310"></slider>
+<slider bindchanging="bezier4" min="30" max="500" value="80"></slider>
+</view>
+
+
+
+
+<canvas canvas-id="myCanvas"></canvas>

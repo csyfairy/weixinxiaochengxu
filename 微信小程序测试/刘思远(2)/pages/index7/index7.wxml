@@ -1,0 +1,20 @@
+<view>
+  <button bindtap="changeUrl">事件跳转</button>
+  <navigator url="/pages/camera/camera">
+    <button>相机/相机API</button>
+  </navigator>
+  <navigator url="/pages/soter/soter">
+    <button>生物认证API</button>
+  </navigator>
+  <navigator url="/pages/storage/storage">
+    <button>本地存储API</button>
+  </navigator>
+  <navigator url="/pages/qrcode/qrcode">
+    <button>二维码API</button>
+  </navigator>
+  <button open-type="share">分享API</button>
+  <navigator url="/pages/douyu/douyu"><button >数据加载API</button></navigator>
+  <navigator url="/pages/animate/animate"><button>动画API</button></navigator>
+  <navigator url="/pages/canvas/canvas"><button>画布API</button></navigator>
+  <navigator url="/pages/media/media"><button>音视频API</button></navigator>
+</view>

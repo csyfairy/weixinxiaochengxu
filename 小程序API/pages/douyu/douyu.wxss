@@ -1,0 +1,18 @@
+/* .myRoom {
+  width: 360rpx;
+  height: 320rpx;
+  margin-top: 10rpx;
+  margin-left: 11.5rpx;
+  display: inline-block;
+}
+
+.myRoom image {
+  width: 100%;
+}
+
+.name{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */

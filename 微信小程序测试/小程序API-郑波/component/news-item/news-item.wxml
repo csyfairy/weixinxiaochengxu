@@ -1,0 +1,11 @@
+<label wx:for="{{pastData.length}}" wx:key="index">
+  <!-- 时间 -->
+  <view wx:if="{{index % 6 == 0}}" wx:for="{{pastDate}}" wx:key="index">
+    <text class="date">{{item}}</text>
+  </view>
+  <!-- 内容 -->
+  <view class="past-item" wx:for="{{pastData}}" wx:key="index">
+    <image src="{{item.images[0]}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</label>

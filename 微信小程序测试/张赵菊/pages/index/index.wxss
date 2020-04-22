@@ -1,0 +1,14 @@
+/**index.wxss**/
+#home button{
+  width: 700rpx;
+  border: 1rpx solid #999;
+  color: #333;
+  margin: 10rpx auto;
+}
+navigator{
+  background: none;
+  margin: 50rpx auto;
+}
+navigator:active{
+  background-color: white
+}

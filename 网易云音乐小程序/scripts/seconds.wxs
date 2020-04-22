@@ -1,0 +1,10 @@
+// 把秒数转换成分钟:秒的形式
+function seconds(sec) {
+  var m = Math.floor(sec / 60);
+  var s = Math.floor(sec % 60);
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+  return m + ":" + s;
+}
+
+module.exports = seconds;

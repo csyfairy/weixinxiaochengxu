@@ -1,0 +1,17 @@
+/* pages/douyu/douyu.wxss */
+/* .myroom{
+  width: 360rpx;
+  height: 260rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  display: inline-block;
+}
+.myroom image{
+  width: 100%;
+}
+.name{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */

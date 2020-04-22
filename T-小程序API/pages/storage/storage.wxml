@@ -1,0 +1,19 @@
+<!--pages/storage/storage.wxml-->
+<!-- 相册 -->
+<view class="imgBox">
+  <!-- 上传图片的按钮 -->
+  <button class="updateBtn" bindtap="updateBtn">上传图片</button>
+  <!-- 图片列表 -->
+  <image wx:for="{{photoPaths}}" src="{{item}}" wx:key="index" mode="aspectFill" bindtap="showBig" data-index="{{index}}"></image>
+</view>
+
+<!-- 大图展示的图层 -->
+<view class="cover" wx:if="{{showBigImg}}" bindtap="hideBig">
+  <image src="{{photoPaths.length > 0 ? photoPaths[currentIndex] :  '/img/timg.jpg'}}" mode="aspectFit"></image>
+  <view class="remove" catchtap="removeImg">删除</view>
+  <view class="prev" catchtap="prevImg">上一张</view>
+  <view class="next" catchtap="nextImg">下一张</view>
+</view>
+
+<!-- bindtap 事件可以冒泡 : 子标签点击可以触发父标签的点击事件 
+    catchtap 阻止冒泡: 子标签点击只能触发本身的点击事件,不能触发父标签ian点击事件-->

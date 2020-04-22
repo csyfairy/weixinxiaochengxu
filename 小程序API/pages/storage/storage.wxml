@@ -1,0 +1,13 @@
+<!--pages/storage/storage.wxml-->
+<!-- 加密相册 -->
+<view wx:if="{{!showImg}}" class="imgBox">
+  <button class="updateBtn" bindtap="updateBtn">上传图片</button>
+  <!-- 图片列表 -->
+  <image wx:for="{{photoPaths}}" src="{{item}}" wx:key="{{index}}" mode="aspectFill" bindtap="showImg" data-index="{{index}}"></image>
+</view>
+
+<!-- 打图展示图层 -->
+<view class="cover" wx:if="{{showBigImg}}" bindtap="hideImg">
+  <image src="{{photoPaths[currentIndex]}}" mode="aspectFill"></image>
+  <button bindtap="renoveImg">删除</button>
+</view>

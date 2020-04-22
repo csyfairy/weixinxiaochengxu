@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "news-item": "/component/news-item/news-item"
+  },
+  "navigationBarTitleText": "知乎日报"
+}

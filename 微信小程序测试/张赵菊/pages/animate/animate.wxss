@@ -1,0 +1,22 @@
+/* pages/animate/animate.wxss */
+button{
+  margin: 60rpx;
+}
+.box{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #f00;
+  margin: auto;
+}
+.cityChange{
+  display: flex;
+  justify-content: space-around;
+  margin: 100rpx 0;
+  align-items: center;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.cityChange image{
+  width: 100rpx;
+}

@@ -1,0 +1,25 @@
+1, 下载腾讯地图sdk  :   libs/qqmap-wx-jssdk.js
+2, 在腾讯地图开放平台注册账号(手机号注册,绑定邮箱)  参考接入指引 
+    https://lbs.qq.com/
+    参考接入指引   注册并申请开发密钥key  
+    CENBZ-JEHLP-BN3D4-V6F43-FCKQV-WGFVY
+3, 点击密钥设置, 填入小程序appID 并设置 WebServiceAPI 
+4, 在小程序中, 引入SDK核心类
+    var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+    var qqmapsdk;
+5, 在onload函数中
+    qqmapsdk = new QQMapWX({
+      key: 'CENBZ-JEHLP-BN3D4-V6F43-FCKQV-WGFVY'
+    });
+6, 点击搜索时 
+    qqmapsdk.search({
+      keyword: "酒店",
+      success: (res) => {
+        console.log(123)
+        console.log(res);
+      },
+      fail:(err)=>{
+        console.log(err)
+      }
+    })
+    

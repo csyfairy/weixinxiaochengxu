@@ -1,0 +1,43 @@
+/* pages/user/user.wxss */
+/* html中的大部分标签也是可以在小程序中用的，但是默认样式不会渲染，需要单独设置(仅仅可以通过样式选择器找到标签) */
+b{
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.userBox,system-box{
+  text-align: center;
+  
+}
+.userBox image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+button{
+  margin: 60rpx;
+}
+.item{
+  background-color: rgb(109, 18, 194);
+  margin: 60rpx;
+  height: 80rpx;
+  border-radius: 6rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+progress{
+  width: 60%
+}
+.copyImg{
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  /* background-image: url(/img/copy.png); */
+  border-radius: 30rpx;
+  background-color: yellowgreen;
+  margin: -195rpx auto;
+  color: white;
+  font-size: 35rpx;
+}

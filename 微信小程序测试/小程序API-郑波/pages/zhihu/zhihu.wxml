@@ -1,0 +1,5 @@
+<!--pages/zhihu/zhihu.wxml-->
+<zhihu-item wx:for="{{zhihuDailyToday}}" wx:key="index" daysList="{{item}}"> 
+   <!-- <view wx:if="{{index != 0}}"></view> -->
+ </zhihu-item>
+

@@ -1,0 +1,10 @@
+<view>
+  <button bindtap="updateBtn">上传图片</button>
+  <view class="imgBox">
+    <image wx:for="{{photoPath}}" src="{{item}}" wx:key="index" mode="aspectFit" bindtap="showBig" data-index="{{index}}"></image>
+  </view>
+  <view class="cover" wx:if="{{bigImg}}" bindtap="hideBig">
+    <image src="{{photoPath[currentIndex] && photoPath[currentIndex]}}" mode="widthFix"></image>
+    <view class="remove" catchtap="removeImg">删除</view>
+  </view>
+</view>

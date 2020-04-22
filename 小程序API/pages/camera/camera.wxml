@@ -1,0 +1,15 @@
+<button type="primary" bindtap="getImage" wx:if="{{updateBtn}}">上传图片</button>
+
+<!-- 显示相机 -->
+<camera wx:if="{{cameraShow}}" device-position="{{cameraDirection}}">
+  <cover-view class="get-img-btn" bindtap="makephoto">
+  </cover-view>
+  <cover-image src="/img/order-h.png" bindtap="cameraChange"></cover-image>
+</camera>
+
+<!-- 保存图片 -->
+<button type="primary" bindtap="saveImage" wx:if="{{saveBtn}}">保存图片</button>
+
+<!-- 显示拍摄的图片 -->
+<image src="{{photoPath}}" mode="widthFix">
+</image>

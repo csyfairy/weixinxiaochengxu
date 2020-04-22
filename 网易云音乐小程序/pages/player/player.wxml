@@ -1,0 +1,52 @@
+<!--pages/player/player.wxml-->
+<view class="player-root-view">
+  <!-- 歌词或者图片 -->
+  <view class="song-info" bindtap="switchLyricOrPic">
+    <!-- 图片部分 -->
+    <view class="pic-box {{songInfoType=='pic'?'show':'hide'}}">
+      <image src="{{song.al?song.al.picUrl:song.album.picUrl}}"></image>
+    </view>
+    <!-- 歌词部分 -->
+    <view class="lyric-box {{songInfoType=='lyric'?'show':'hide'}}">
+      <view class="noLyric" wx:if="{{lyricArr.length==0}}">纯音乐，暂无歌词</view>
+      <scroll-view class="scroll" wx:else scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="line{{line<3?'0':line-3}}">
+        <view class="lyric-line {{index == line?'lyric-line-active':''}}" wx:for="{{lyricArr}}" wx:key="index" id="line{{index}}">
+          {{item.content || "--"}}
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 歌曲名和作者 -->
+  <view class="song-name">
+    <view class="name">{{song.name}}</view>
+    <view class="artist">演唱者：{{artist(song.ar || song.artists)}}</view>
+  </view>
+
+  <view class="control-box">
+    <slider step="0.01" value="{{progress}}" bindchange="progressChange"></slider>
+    <view>{{seconds(current)}}/{{seconds(duration)}}</view>
+    <view class="control">
+      <image class="ctl-btn" bindtap="prevClick" src="/images/prev.png"></image>
+      <image class="ctl-btn" bindtap="pauseOrPlayClick" src="/images/{{isPlaying?'pause':'play'}}.png"></image>
+      <image class="ctl-btn" bindtap="nextClick" src="/images/next.png"></image>
+    </view>
+  </view>
+
+
+  <!-- 播放类型 -->
+  <view class="type-box">
+    <image class="type-btn {{playType=='loop'?'type-btn-active':''}}" src="/images/loop.png" data-type="loop" bindtap="switchPlayType"></image>
+    <image class="type-btn {{playType=='random'?'type-btn-active':''}}" src="/images/random.png" data-type="random" bindtap="switchPlayType"></image>
+    <image class="type-btn {{playType=='single'?'type-btn-active':''}}" src="/images/sing-loop.png" data-type="single" bindtap="switchPlayType"></image>
+    <image class="type-btn-star" src="/images/{{isFavorite?'star-h':'star'}}.png" bindtap="favoriteClick"></image>
+  </view>
+
+<!-- 播放列表 -->
+<play-list></play-list>
+
+</view>
+
+<!-- 拼接演唱者的过滤器 -->
+<wxs src="../../scripts/artist.wxs" module="artist"></wxs>
+<wxs src="../../scripts/seconds.wxs" module="seconds"></wxs>

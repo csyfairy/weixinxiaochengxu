@@ -1,0 +1,2 @@
+<!--pages/zhihu-room/zhihu-room.wxml-->
+<web-view src="{{url}}"></web-view>

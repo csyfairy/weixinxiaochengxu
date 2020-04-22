@@ -1,0 +1,36 @@
+<view>
+  <button type="primary" bindtap="getUser" bindgetuserinfo="getUserInfo" open-type="getUserInfo">获取用户信息</button>
+</view>
+<view class="user-box" wx:if="{{userInfo}}">
+  <image src="{{userInfo.avatarUrl}}"></image>
+  <view><b>{{userInfo.nickName}}</b></view>
+  <view>性别:
+    <text wx:if="{{userInfo.gender == 0}}">未知</text>
+    <text wx:elif="{{userInfo.gender == 1}}">男</text>
+    <text wx:else>女</text>
+  </view>
+  <view>{{userInfo.country}}--{{userInfo.province}}--{{userInfo.city}}</view>
+  <open-data type="userCountry" lang="zh_CN"></open-data>
+</view>
+<button type="primary" bindtap="getSystemInfo">获取系统信息</button>
+<view wx:if="{{systemInfo}}" class="user-box">
+  <view>设备品牌：{{systemInfo.brand}}</view>
+  <view>设备型号：{{systemInfo.model}}</view>
+  <view>设备操作系统：{{systemInfo.system}}</view>
+  <view>设备客户端平台：{{systemInfo.platform}}</view>
+</view>
+<view class="item">
+  <label>打开/关闭 WIFI</label>
+  <switch checked="{{onWifi}}" type='switch' bindchange="changeWifi"></switch>
+</view>
+<view class="item">
+  <label>打开/关闭 蓝牙</label>
+  <switch checked="{{onBluetooth}}" type='switch' bindchange="changeBluetooth"></switch>
+</view>
+<view>
+  <!-- <text wx:if="{{isCharging}}">⚡</text> -->
+  <progress percent="{{level}}" show-info="{{true}}"></progress>
+</view>
+<button bindtap="chooseFriend" type="primary">选择联系人</button>
+<input bindinput='copy' bindlongtap="copyed">{{copyInfo}}</input>
+<button bindtap="getCopyInfo">获取剪贴板内容</button>

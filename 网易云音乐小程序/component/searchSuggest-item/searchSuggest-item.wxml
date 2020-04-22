@@ -1,0 +1,6 @@
+<!--components/searchSuggest-item/searchSuggest-item.wxml-->
+<view class="item" bindtap="musicClick">
+  <view class="name">{{songsList.name}}</view>
+  <view class="singer">演唱者:{{  songsList.artists[0].name}}</view>
+  <view class="special">专辑{{songsList.album.name}}</view>
+</view>

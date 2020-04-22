@@ -1,0 +1,123 @@
+/* pages/map/map.wxss */
+map{
+  width: 100vw;
+  height: 100vh;
+}
+.posBtn{
+  position: absolute;
+  left: 20rpx;
+  bottom: 200rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.posBtn:active{
+  opacity: 0.5;
+}
+.bigger{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 300rpx;
+  background-color: white;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.smaller{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 230rpx;
+  background-color: white;
+  font-size: 80rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.bigger:active, .smaller:active{
+  background-color: gray;
+}
+.ruler{
+  width: 100rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 180rpx;
+}
+.hr{
+  width:120rpx;
+  height: 10rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 165rpx;
+  /* cover-view在安卓真机测试时不显示边框,可以用背景图拼接实现 */
+  border-bottom: 3rpx solid;
+  border-left: 3rpx solid;
+  border-right: 3rpx solid;
+}
+.traffic{
+  width:80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 400rpx;
+  border-radius: 10rpx;
+}
+.satellite{
+  width:80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 320rpx;
+  border-radius: 10rpx;
+}
+
+.mapInput{
+  position: absolute;
+  top:  50rpx;
+}
+
+.input-view{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 460rpx;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+}
+.search-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx;
+  /* border: 1px solid; */
+}
+.search-btn{
+  position: absolute;
+  top: 30rpx;
+  left: 580rpx;
+  width: 140rpx;
+  height: 80rpx;
+  background-color: #149acf;
+  border-radius: 40rpx;
+  color: white;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.mapInput{
+  position: fixed;
+  top: -50rpx;
+  left: 0rpx;
+  background-color: red;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zhihu-item":"/component/zhihuItem/zhihuItem"
+  },
+  "navigationBarTitleText": "知乎日报"
+}

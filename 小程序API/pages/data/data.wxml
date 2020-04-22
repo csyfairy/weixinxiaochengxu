@@ -1,0 +1,46 @@
+<view class="root">
+  <input class="MyInput" value="{{count}}" bindinput="myInput"></input>
+  <view class="view">输入框绑定的数据是 : {{count}}</view>
+  <button bindtap="add" type="primary">+</button>
+
+  <!-- 条件渲染 -->
+  <view wx:if="{{isShow}}">是否显示当前标签</view>
+  <view wx:if="{{count % 2 ==0 }}">偶数</view>
+  <view wx:else>奇数</view>
+
+  <!-- 列表渲染 -->
+  <view wx:for="{{nameList}}" wx:key="index">
+    {{index}}:{{item}}
+  </view>
+
+  <view wx:for="{{nameList}}" wx:for-item="name" wx:for-index="i" wx:key="i">
+    {{i}}:{{name}}
+  </view>
+
+  <block wx:for="{{nameList}}" wx:key="index">
+    <label>索引是{{index}}</label>
+    <view>姓名：{{item}}</view>
+  </block>
+
+  <picker mode="selector" range="{{nameList}}" bindchange="nameChange">
+    <input class="nameInput" value="{{nameList[nameIndex]}}"></input>
+    <button type="primary">姓名:{{nameList[nameIndex]}}</button>
+  </picker>
+
+  <picker-view>
+    <picker-view-column>
+      <view>1</view>
+      <view>2</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view>a</view>
+      <view>b</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view>A</view>
+      <view>B</view>
+    </picker-view-column>
+  </picker-view>
+
+
+</view>

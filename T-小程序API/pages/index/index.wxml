@@ -1,0 +1,24 @@
+<view id="home">
+  <!-- 小程序中使用bind开头执行事件绑定  bindtap指点击事件  bindlongtap长按事件  bindtouchstart开始触摸事件  bindtouchmove触摸移动事件(相当于mousemove) -->
+  <button bindtap="btnClick">事件绑定和数据渲染API</button>
+
+  <!-- 导航标签直接跳转页面 -->
+  <navigator url="/pages/camera/camera"><button>相机/相册API</button></navigator>
+
+  <navigator url="/pages/soter/soter"><button>生物认证API</button></navigator>
+
+  <navigator url="/pages/storage/storage"><button>本地存储API</button></navigator>
+
+  <navigator url="/pages/qrcode/qrcode"><button>二维码API</button></navigator>
+
+  <navigator><button open-type="share">分享API</button></navigator>
+
+  <navigator url="/pages/douyu/douyu"><button>数据请求/加载API</button></navigator>
+
+  <navigator url="/pages/animate/animate"><button>动画API</button></navigator>
+
+  <navigator url="/pages/canvas/canvas"><button>canvas画布API</button></navigator>
+
+  <navigator url="/pages/media/media"><button>音视频API</button></navigator>
+
+</view>

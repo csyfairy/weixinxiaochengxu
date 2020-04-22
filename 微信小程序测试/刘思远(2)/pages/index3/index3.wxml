@@ -1,0 +1,20 @@
+<view>
+  <!--pages/index3/index3.wxml-->
+  <text bindtap="textClick" data-id="{{title}}">text标签内容</text>
+  <view>
+    view标签
+  </view>
+  <view>
+    {{msg}}
+  </view>
+  <view data-id="{{title}}">title</view>
+  <view>
+    <checkbox checked="{{true}}"></checkbox>
+    <checkbox checked="{{isChecked ? false : true}}"></checkbox>
+    {{num+10}}
+    <view wx:if="{{num == 10}}">显示吧</view>
+    <view wx:for="{{array}}" wx:key="index">{{index}}:{{item}}</view>
+    <view wx:for="{{person}}" wx:key="index" wx:for-index="key">{{key}}:{{item}}</view>
+    <block wx:for="{{array}}" wx:key="index">{{index}}:{{item}}</block>
+  </view>
+</view>

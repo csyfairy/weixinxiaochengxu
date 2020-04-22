@@ -1,0 +1,38 @@
+swiper{
+  height: 450rpx;
+  position: relative
+}
+swiper-item image{
+  width: 750rpx
+}
+.swiper-title{
+  position: absolute;
+  bottom: 100rpx;
+  left: 50rpx;
+  color: white;
+  font-size: 30rpx
+}
+.news-list{
+  padding: 20rpx;
+  display: flex
+}
+.image-box{
+  width: 230rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.news-list image{
+  width: 100%;
+  height: 100%
+}
+.list-title{
+  width: 520rpx;
+  font-size: 30rpx
+}
+.news-date{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: skyblue;
+  color: white
+}

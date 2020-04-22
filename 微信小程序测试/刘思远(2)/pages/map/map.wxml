@@ -1,0 +1,10 @@
+<map longitude="{{longitude}}" latitude="{{latitude}}" show-location show-compass show-scale id="myMap" scale="{{scale}}" enable-traffic="{{traffic}}" markers="{{markerList}}"></map>
+<cover-image class="posBtn" src="../../icons/location.png" bindtap="nowPos"></cover-image>
+<cover-view class="bigger" bindtap="bigger">+</cover-view>
+<cover-view class="smaller" bindtap="smaller">-</cover-view>
+<cover-image src="{{traffic ? '../../icons/traffic_active.png' : '../../icons/traffic.png'}}" class="traffic" bindtap="traffic"></cover-image>
+<cover-view class="search-box">
+  <cover-view bindtap="focusInput" class="input-view">{{searchKey}}</cover-view>
+  <button class="search-btn" bindtap="search">搜索</button>
+</cover-view>
+<input class="mapInput" focus="{{isFocus}}" bindinput="myInput"></input>

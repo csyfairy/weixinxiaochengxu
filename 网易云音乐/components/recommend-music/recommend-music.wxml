@@ -1,0 +1,27 @@
+<!--components/recommend-music/recommend-music.wxml-->
+<view class="recommend-music-root-view">
+  <!-- 标题 -->
+  <view class="recommend-title">
+    <slot></slot>
+  </view>
+  <!-- 列表 -->
+  <view class="list-box">
+    <view class="list-item" wx:for="{{recommendMusic}}" wx:key="index" data-index="{{index}}" bindtap="listItemClick">
+      <view class="pic">
+        <image src="{{item.album.picUrl}}"></image>
+      </view> 
+      <view class="info-box">
+        <view class="name">{{item.name}}</view>
+        <view class="artists">
+          <text>演唱：</text>
+          <block wx:for="{{item.artists}}" wx:for-index="i" wx:key="i" wx:for-item="art">
+            {{art.name}}{{i==item.artists.length-1?"":"，"}}
+          </block>
+        </view>
+        <view class="album">
+          专辑《{{item.album.name}}》
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{1500}}" duration="{{500}}" circular="{{true}}">
+  <block wx:for="{{slideshowData}}" wx:key="index">
+    <swiper-item bindtap="newsDetail" data-url="{{item.url}}">
+      <image src="{{item.image}}"></image>
+      <!-- 加图片无法显示？？？ -->
+      <text>{{item.title}}</text>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 新闻 -->
+<view wx:for="{{nowData}}" wx:key="index" bindtap="newsDetail" data-url="{{item.url}}">
+  <image src="{{item.images[0]}}"></image>
+  <text>{{item.title}}</text>
+</view>
+
+<!-- 过去的新闻 -->
+<news-item pastData="{{pastData}}" pastDate="{{pastDate}}"></news-item>

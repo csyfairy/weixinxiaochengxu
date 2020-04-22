@@ -1,0 +1,25 @@
+<view class="wrapper">
+  <MyHeader bindgetData="onGetData">页面6</MyHeader>
+  <view class="input-box">
+    <input class="input" value="{{count}}" bindinput="myInput"></input>
+    <view class="input-view">输入框数据:{{count}}</view>
+  </view>
+  <button bindtap="add">点击数字加1</button>
+  <view wx:if="{{isShow}}">这是一段可显示隐藏的文本</view>
+  <button bindtap="show">{{isShow ? '隐藏' : '显示'}}</button>
+  <view wx:for="{{5}}" wx:key="i">
+    索引{{index}}数据{{item}}
+  </view>
+  <picker range="{{[1,2,3]}}" value="0">
+    <button type="primary">选择</button>
+  </picker>
+  <picker value="{{time}}" mode="time" start="09：00" end="18:00" bindchange="timeChange">
+    <button type="primary">选择时间:{{time}}</button>
+  </picker>
+  <picker value="{{date}}" mode="date" bindchange="dateChange">
+    <button type="primary">选择日期:{{date}}</button>
+  </picker>
+  <picker value="{{region}}" mode="region" bindchange="regionChange">
+    <button type="primary">选择地区:{{region}}</button>
+  </picker>
+</view>

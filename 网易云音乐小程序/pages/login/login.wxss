@@ -1,0 +1,36 @@
+.login-root-view{
+  background-color: #eee;
+  height: 100vh;
+  padding: 0 50rpx;
+  overflow: hidden;
+}
+
+.form-line{
+  display: flex;
+  border-bottom: 1rpx solid pink;
+  margin: 50rpx 0;
+  font-size: 40rpx;
+}
+
+.form-line input{
+  padding-left: 40rpx;
+}
+
+.go-regist{
+  text-align: center;
+  color: rgb(93, 114, 184);
+  margin: 20rpx;
+}
+
+.pass{
+  color: green;
+  margin: -30rpx 0;
+}
+.noPass{
+  color: red;
+  margin: -30rpx 0;
+}
+button{
+  margin-top: 50rpx;
+}
+

@@ -1,0 +1,11 @@
+小程序阶段性测试要求: 
+测试内容: 实现小程序 新闻业展示, 使用知乎日报数据
+测试数据链接: 
+	知乎今日要问  
+	https://news-at.zhihu.com/api/4/news/latest
+	知乎前一天新闻
+	https://news-at.zhihu.com/api/4/news/before/20200313 (当天日期)
+测试效果: 展示截图已发至钉钉群
+测试时间: 今天下午6点前
+
+

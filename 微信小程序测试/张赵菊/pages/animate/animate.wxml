@@ -1,0 +1,11 @@
+<!--pages/animate/animate.wxml-->
+<button type="primary" bindtap="beginAnimate">点击开始执行动画</button>
+<view class="box" animation="{{boxAni}}"></view>
+
+
+<!-- 切换城市 -->
+<view class="cityChange">
+<view id="leftView" animation="{{leftAni}}">{{fromCity}}</view>
+<image mode="widthFix" src="/img/change.jpg" bindtap="changeCity"></image>
+<view animation="{{rightAni}}" class="rightView">{{toCity}}</view>
+</view>

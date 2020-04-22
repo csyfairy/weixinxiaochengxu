@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchSuggest-item": "/component/searchSuggest-item/searchSuggest-item",
+    "cd-music": "../../component/cd-music/cd-music"
+  },
+  "navigationBarTitleText": "搜索"
+}

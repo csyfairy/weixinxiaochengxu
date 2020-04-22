@@ -1,0 +1,23 @@
+.imgBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+.imgBox image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 3rpx
+}
+.cover{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.cover image{
+  width: 750rpx
+}

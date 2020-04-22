@@ -1,0 +1,10 @@
+<view>
+  <button type="primary" bindtap="startSoter" wx:if="{{!showImages}}">指纹认证</button>
+  <view  wx:if="{{showImages}}">
+    <button bindtap="updateBtn">上传图片</button>
+    <view class="imgBox">
+      <image wx:for="{{photoPath}}" src="{{item}}" wx:key="index" mode="widthFixed" bindtap="showBig" data-url="{{item}}"></image>
+    </view>
+    <view class="cover" wx:if="{{bigImg}}" bindtap="hideBig"><image src="{{currentImagePath}}" mode="widthFixed"></image></view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/**index.wxss**/
+.myList-btn{
+  margin: 20rpx;
+}

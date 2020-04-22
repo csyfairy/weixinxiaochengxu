@@ -1,0 +1,10 @@
+<!--components/search-result/search-result.wxml-->
+<view class="search-result-root-view">
+  <view class="item" wx:for="{{resultList}}" wx:key="index" data-index="{{index}}" bindtap="itemClick">
+    <view class="name">{{item.name}}</view>
+    <view class="artist">
+      演唱者：<text wx:for="{{item.artists}}" wx:for-item="arts" wx:for-index="i" wx:key="i">{{arts.name}}{{i<item.artists.length-1?'，':''}}</text>
+    </view>
+    <view class="album">专辑 : {{item.album.name}}</view>
+  </view>
+</view>

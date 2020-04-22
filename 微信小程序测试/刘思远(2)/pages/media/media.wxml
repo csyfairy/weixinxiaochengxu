@@ -1,0 +1,11 @@
+<audio id="myAudio" src="" controls="{{true}}" poster="/images/change.jpg" name="最近" author="李圣杰"></audio>
+<button bindtap="play">播放音乐</button>
+<button bindtap="pause">暂停音乐</button>
+<button bindtouchstart="startRecord" bindtouchend="stopRecord">
+  按下开始录音
+  <text wx:if="{{recordTime}}">🔊{{recordTime}}</text>
+</button>
+<view wx:for="{{recordPaths}}" wx:key="index" class="recordItem" data-path="{{item}}" bindtap="playVoice"></view>
+<video src="{{src}}" danmu-list="{{danmuList}}" danmu-btn="{{true}}"></video>
+<input bindblur="bindInputBlur"></input>
+<button bindtap="sendDanmu">发送弹幕</button>

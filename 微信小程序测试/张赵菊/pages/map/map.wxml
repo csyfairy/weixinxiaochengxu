@@ -1,0 +1,49 @@
+<!--pages/map/map.wxml-->
+<map 
+longitude="{{longitude}}"
+latitude="{{latitude}}" 
+show-location = "{{true}}"
+show-compass = "{{true}}"
+enable-overlooking = "{{true}}"
+enable-satellite = "{{satellite}}"
+id="mapid"
+scale="{{scale}}"
+enable-traffic="{{traffic}}"
+bindregionchange="regionchange"
+markers="{{markerList}}"
+>
+
+<!-- 测试权限标签 -->
+<cover-view class="temp" bindtap="openSetting">点我</cover-view>
+</map>
+
+<!-- 返回当前位置btn -->
+<cover-image 
+class="boxBtn" 
+src="/img/pos.png"
+bindtap="nowPos"
+></cover-image>
+
+<!-- 放大缩小的比例尺 -->
+<cover-view class="bigger" bindtap="bigger">+</cover-view>
+<cover-view class="smaller" bindtap="smaller">-</cover-view>
+
+<cover-view class="ruler">{{rulerList[rulerIndex]}}</cover-view>
+<cover-view class="hr"></cover-view>
+
+<!-- 控制实时路况的开启关闭 -->
+<cover-image src="{{trafficImg}}" class="traffic" bindtap="traffic"></cover-image>
+<!-- 控制卫星图的开启关闭 -->
+<cover-image src="{{satelliteImg}}" class="satellite" bindtap="satellite"></cover-image>
+
+<!-- 搜索模块 -->
+<!-- <cover-view/> 内只能嵌套 <cover-view/> <cover-image/> <button/> <navigator/> <ad/>，input 标签的子节点树在真机上都会被忽略。 -->
+
+<cover-view class="searchBox">
+<cover-view class="input-view" bindtap="focusInput">{{searchKey}}</cover-view>
+<button class="search-btn" bindtap="search">搜索</button>
+</cover-view>
+
+
+<!-- 输入框不能显示到地图上层，可以放在地图下层，用一个地图上层的cover-view和输入框绑定，点击cover-view时让输入框获取焦点，输入框输入时让cover-veiw显示输入内容 -->
+<input  bindinput="myInput" class="mapInput" focus="{{isFocus}}"></input>

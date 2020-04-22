@@ -1,0 +1,13 @@
+.cityChange {
+  display: flex;
+  justify-content: space-around;
+  margin: 100rpx 0;
+  align-items: center;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.cityChange image {
+  width: 100rpx;
+}

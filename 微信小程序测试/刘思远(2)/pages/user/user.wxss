@@ -1,0 +1,23 @@
+/* pages/user/user.wxss */
+b{
+  font-weight: bold
+}
+.user-box{
+  text-align: center
+}
+.user-box image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%
+}
+.item{
+  
+  margin: 60rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+button{
+  margin: 60rpx
+}

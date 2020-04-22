@@ -1,0 +1,11 @@
+<!--component/my-room/my-room.wxml-->
+<view class="room-item" bindtap="enterRoom" data-rid="{{room.rid}}">
+  <image mode="widthFix" src="{{room.roomSrc}}"></image>
+  <view class="name">{{room.roomName}}</view>
+  <view class="lineBox">
+    <!--  -->
+    <view>
+      <image class="headImg" src="{{room.avatar}}"></image>{{room.nickname}}</view>
+    <view>🔥{{room.hn}}</view>
+  </view>
+</view>

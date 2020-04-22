@@ -1,0 +1,155 @@
+/* pages/map/map.wxss */
+
+map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.temp {
+  width: 10vw;
+  height: 5vh;
+  background-color: #00f;
+  z-index: 123;
+}
+
+.boxBtn {
+  position: absolute;
+  left: 20rpx;
+  top: 700rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.posBtn {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 670rpx;
+}
+
+.bigger {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 600rpx;
+  background-color: #fff;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.smaller {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 670rpx;
+  background-color: #fff;
+  font-size: 80rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.bigger:active, .smaller:active {
+  background-color: gray;
+}
+
+.ruler {
+  width: 100rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 180rpx;
+}
+
+.hr {
+  width: 120rpx;
+  height: 20rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 150rpx;
+  /* cover-view在安卓真机测试时不显示边框,可以用背景拼接效果 *//* background-color: black; */
+  border-left: 3rpx solid;
+  border-right: 3rpx solid;
+  border-bottom: 3rpx solid;
+}
+
+.traffic {
+  width: 80rpx;
+  right: 15rpx;
+  position: absolute;
+  height: 100rpx;
+  top: 300rpx;
+}
+
+.satellite {
+  width: 80rpx;
+  right: 15rpx;
+  position: absolute;
+  height: 100rpx;
+  top: 350rpx;
+}
+
+/* .mapInput{
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+} */
+
+.search-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx;
+  /* border: 1px solid; */
+}
+
+.input-view {
+  position: absolute;
+  top: 30rpx;
+  left: 50rpx;
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: white;
+  padding: 0 30rpx;
+  z-index: 100;
+}
+
+.saearch-btn {
+  position: absolute;
+  top: 30rpx;
+  left: 630rpx;
+  width: 120rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #149acf;
+  color: white;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  z-index: 100;
+}
+
+.mapInput {
+  position: absolute;
+  top: 30rpx;
+  left: 50rpx;
+  width: 0rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: white;
+  padding: 0 30rpx;
+  z-index: 50;
+  /* background-color: red; */
+}

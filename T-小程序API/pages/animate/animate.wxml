@@ -1,0 +1,14 @@
+<!--pages/animate/animate.wxml-->
+<button type="primary" bindtap="beginAnimation">点击开始执行动画</button>
+<button type="primary" bindtap="beginRotate">点击旋转</button>
+<button type="primary" bindtap="beginMove">点击移动</button>
+<button type="primary" bindtap="beginHide">点击隐藏</button>
+<button type="primary" bindtap="beginBack">点击还原</button>
+<view class="box" animation="{{boxAnimation}}"></view>
+
+<!-- 切换城市 -->
+<view class="cityChange">
+  <view animation="{{aniLeftData}}" class="leftView">{{fromCity}}</view>
+  <image mode="widthFix" src="/img/change.jpg" bindtap="changeCity"></image>
+  <view animation="{{aniRightData}}" class="rightView">{{toCity}}</view>
+</view>

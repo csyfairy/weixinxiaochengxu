@@ -1,0 +1,23 @@
+<!--pages/user/user.wxml-->
+<view class="user-root-view">
+  <!-- 展示用户信息 -->
+  <view class="user-info">
+    <!-- 展示用户头像 -->
+    <view class="avatar-box">
+      <image class="avatar" src='{{userInfo?userInfo.avatarUrl:"/images/timg.jpg"}}'></image>
+    </view>
+
+    <!-- 展示用户昵称 -->
+    <view class="nickname-box">
+      <view class="nickname" wx:if="{{userInfo}}">{{userInfo.nickname}}</view>
+      <view class="nickname" wx:else >未登录</view>
+    </view>
+
+    <!-- 登录和退出登录 -->
+    <view class="nickname-box">
+      <button class="btn" wx:if="{{userInfo}}" bindtap="exitLogin">退出登录</button>
+      <button class="btn" wx:else bindtap="goToLogin">去登录</button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-swiper": "/component/my-swiper/my-swiper",
+    "news-item": "/component/news-item/news-item"
+  },
+  "navigationBarTitleText": "知乎日报"
+}

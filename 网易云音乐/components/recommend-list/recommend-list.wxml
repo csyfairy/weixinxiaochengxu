@@ -1,0 +1,25 @@
+<!--components/recommend-list/recommend-list.wxml-->
+<view class="recommend-list-root-view">
+  <view class="recommend-title">
+    <slot></slot>
+  </view>
+  <view class="list-box">
+    <view wx:for="{{recommendList}}" wx:key="index" class="list-item" data-id="{{item.id}}" bindtap="listItemClick">
+      <image class="pic" src="{{item.picUrl}}"></image>
+      <view class="info-box">
+        <view class="name">{{item.name}}</view>
+        <view class="copywriter">{{item.copywriter}}</view>
+        <view class="count">
+          <!-- 使用wxs实现的过滤器可以直接在wxml的{{}}中使用 -->
+          <text decode="{{true}}" class="playCount">播放:{{wan(item.playCount)}} &ensp;</text>
+          <text class="trackCount">歌曲数:{{item.trackCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 导入全局过滤器, src属性指定模块路径, module属性接受模块导出的数据 -->
+<wxs src="../../scripts/wan.wxs" module="wan"></wxs>
+
+

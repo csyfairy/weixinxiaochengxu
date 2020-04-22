@@ -1,0 +1,13 @@
+/* pages/index4/index4.wxss */
+@import "../../style/box.wxss";
+.box1{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: aqua;
+}
+.box{
+  font-size: 50rpx
+}
+.hover_class{
+  background-color: red
+}

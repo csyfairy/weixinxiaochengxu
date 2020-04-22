@@ -1,0 +1,51 @@
+/* pages/media/media.wxss */
+#myAudio,button{
+  margin: 30rpx;
+}
+
+.recordItem{
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx;
+  border-radius: 30rpx;
+  background-color: #999;
+  padding-left: 30rpx;
+  /* max-width: 600rpx; */
+}
+
+video{
+  width: 100%;
+}
+
+ input{
+   padding: 30rpx;
+   text-align: center;
+ }
+
+ button text{
+   display: inline-block;
+   width: 0rpx;
+   /* border: 1px solid; */
+   text-align: left;
+   white-space: nowrap;
+ }
+
+ .record{
+   position: relative;
+ }
+
+ button .cover{
+   width: 0;
+   height: 100%;
+   background-color: aqua;
+   position: absolute;
+   left: 0;
+   top: 0;
+   /* opacity: 0.2; */
+ }
+
+ .record .text{
+   position: relative;
+   z-index: 100;
+ }

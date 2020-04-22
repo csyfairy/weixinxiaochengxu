@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view class="login-root-view">
+  <!-- 手机号/邮箱 -->
+  <view class="form-line">
+    <label>手机</label>
+    <input type="number" placeholder="请输入手机号" bindblur="phoneInput"></input>
+  </view>
+  <view class="pass" wx:if="{{phoneState==1}}">✔手机号可用</view>
+  <view class="noPass" wx:if="{{phoneState==2}}">⚔请填入正确的手机号</view>
+  <!-- 密码 -->
+  <view class="form-line">
+    <label>密码</label>
+    <input type="password" placeholder="请输入密码" bindblur="passwordInput"></input>
+  </view>
+  <view class="pass" wx:if="{{passwordState==1}}">✔密码可用</view>
+  <view class="noPass" wx:if="{{passwordState==2}}">⚔密码必须以字母开头且长度在6-15位之间,可以包含._</view>
+  <!-- 登陆 -->
+  <view>
+    <button type="primary" bindtap="loginTap">登陆</button>
+  </view>  
+  <navigator url="/pages/regist/regist" class="go-regist">---没有账号,先去注册---</navigator>
+</view>

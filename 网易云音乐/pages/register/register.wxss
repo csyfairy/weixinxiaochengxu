@@ -1,0 +1,48 @@
+/* pages/register/register.wxss */
+.regist-root-view{
+  background-color: #eee;
+  height: 100vh;
+  padding: 0 50rpx;
+  overflow: hidden;
+}
+
+.form-line{
+  display: flex;
+  border-bottom: 1rpx solid pink;
+  align-items: flex-end;
+  margin: 50rpx 0;
+  font-size: 40rpx;
+}
+
+.form-line input{
+  padding-left: 40rpx;
+}
+
+.tap{
+  font-size: 26rpx;
+  color: gray;
+  position: relative;
+  top: -15rpx;
+}
+
+.codeInput{
+  border: 1px solid greenyellow;
+  width: 320rpx;
+  height: 80rpx;
+  padding: 0 !important;
+  text-align: center;
+}
+.codeBtn{
+  width: 300rpx;
+  color: rgb(14, 250, 132);
+  white-space: nowrap;
+}
+
+.pass{
+  color: green;
+  margin: -30rpx 0;
+}
+.noPass{
+  color: red;
+  margin: -30rpx 0;
+}

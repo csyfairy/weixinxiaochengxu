@@ -1,0 +1,4 @@
+<!--pages/douyu-room/douyu-room.wxml-->
+
+<!-- web-view 承载网页的容器。会自动铺满整个小程序页面， -->
+<web-view src="{{roomUrl}}"></web-view>

@@ -1,0 +1,6 @@
+/* pages/media/media.wxss */
+.recordItem{
+  width: 500rpx;
+  height: 50rpx;
+  border: 1px solid;
+}

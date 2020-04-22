@@ -1,0 +1,29 @@
+<!--pages/media/media.wxml-->
+<!-- 使用音频组件播放声音 -->
+<audio id="myAudio" src="/img/deFenJiQiao.mp3" controls="{{true}}" poster="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000" name="得分技巧" author="许巍"></audio>
+
+<!-- 播放音乐按钮 -->
+<button bindtap="play" type="primary">播放音乐</button>
+<button bindtap="pause" type="primary">暂停音乐</button>
+<!-- 按下开始录音,松开结束录音 -->
+<button bindtouchstart="startRecord" bindtouchend="stopRecord" type="default" class="record">
+  <view class="cover" style="width:{{recordTime * 690 / 60}}rpx"></view>
+
+  <view class="text">
+    按下开始录音
+    <text wx:if="{{recordTime}}">🔊{{recordTime / 10}}</text>
+  </view>
+
+</button>
+<!-- 显示录音文件 -->
+<view wx:for="{{recordPaths}}" wx:key="index" class="recordItem" data-path="{{item.path}}" bindtap="playRecord" style="width:{{item.time * 500 / 6 + 150}}rpx">🔊{{item.time}}秒</view>
+
+
+<!-- 视频 -->
+<video id="myVideo" src="{{src}}" danmu-list="{{danmuList}}" danmu-btn="{{true}}"></video>
+
+<button bindtap="getVideo" type="primary">选择视频</button>
+
+<input placeholder="请输入弹幕信息" bindblur="bindInputBlur" value="{{danmu}}"></input>
+
+<button bindtap="sendDanmu">发送弹幕</button>

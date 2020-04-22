@@ -1,0 +1,112 @@
+<!--pages/myPages/myPages.wxml-->
+<!-- text 行标签 -->
+<text>{{name}}</text>
+<text>{{name}}</text>
+<!-- view 快标签 -->
+<view>view</view>
+<image mode="top" src="/img/1.jpg"></image>
+<image src="img/2.jpg"></image>
+<image mode="widthFix" src="http://img.ewebweb.com/uploads/20190403/15/1554275984-CghfBeMolO.jpg"></image>
+
+<!-- 系统相机 -->
+<!-- <camera>
+  原生相机
+  <view>这个字看不到</view>
+  <cover-view>显示在相机上边</cover-view>
+</camera> -->
+
+<!-- 拖拽试图 -->
+<!-- 拖拽区域 -->
+<movable-area scale-area="true">
+  <!-- 可拖拽的视图 -->
+  <movable-view direction="all" scale="true">
+  </movable-view>
+</movable-area>
+
+<!-- 滚动视图 -->
+<scroll-view scroll-x="true" scroll-y="true">
+  <image src="/img/1.jpg"></image>
+</scroll-view>
+
+<!-- 轮播图 -->
+<swiper indicator-dots="true" indicator-color="rgba(232,133,133)" autoplay="true" interval="2000">
+  <swiper-item>
+    <image src="https://gw.alicdn.com/bao/uploaded/i4/2319581510/O1CN01xYdL3I1N1cd6XuvZJ_!!0-item_pic.jpg_230x230"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://gw.alicdn.com/bao/uploaded/i1/2076458873/O1CN01Hi5tav2FPsrQ1KQo5_!!0-item_pic.jpg_230x230"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://img.alicdn.com/imgextra/i1/2200727760239/O1CN01lHhWbP1DdVFFmRFI8_!!0-item_pic.jpg_430x430q90.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://gw.alicdn.com/bao/uploaded/i1/2204112065362/O1CN01kFviNM1pTqI7swQsG_!!2204112065362-0-pixelsss.jpg_230x230"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://gw.alicdn.com/bao/uploaded/i1/3229471435/O1CN011BXd0B1MTGwRicMJg_!!3229471435-0-pixelsss.jpg_230x230"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 图标 -->
+<icon type="success" size="100"></icon>
+
+<!-- 进度条 -->
+<progress percent="50" show-info="true" active="true"></progress>
+
+<!-- 富文本 -->
+<rich-text>
+  张&nbsp:三
+</rich-text>
+
+<!-- button -->
+<button>提交</button>
+<input></input>
+
+<!-- 滚动选择器 -->
+<picker mode="selector" range="{{list}}" value="2">
+  <button>开关</button>
+</picker>
+
+<!-- 页面跳转 -->
+<navigator url="/pages/index/index">
+  点击跳到首页
+</navigator>
+
+<checkbox-group>
+  <checkbox>语文</checkbox>
+  <checkbox color="#eeeeee">数学</checkbox>
+  <checkbox checked="true">英语</checkbox>
+  <checkbox>地理</checkbox>
+</checkbox-group>
+
+<!-- form -->
+<form>
+  <view>switch</view>
+  <switch name="switch" type="switch" color="#ff000" checked="true" />
+
+  <view>input</view>
+  <input class="form-input" password="true" maxlength="8"></input>
+</form>
+
+<!-- 单选框 -->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">radio</text>
+    <text class="page__desc">单选框</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+          <text>{{item.value}}</text>
+        </radio>
+      </radio-group>
+    </view>
+  </view>
+</view>
+
+<radio-group>
+  <radio>12</radio>
+  <radio>34</radio>
+  <radio>56</radio>
+</radio-group>

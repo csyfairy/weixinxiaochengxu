@@ -1,0 +1,13 @@
+// 这个wxs文件是一个单位过滤器, 用于过滤数字显示
+// 把数据改为万为单位
+function wanFilter(n) {
+  n = n * 1;
+  if (n < 10000) {
+    return n;
+  } else {
+    return Math.round(n / 10000) + "万";
+  }
+}
+
+// 使用模块化导出过滤器函数
+module.exports = wanFilter;

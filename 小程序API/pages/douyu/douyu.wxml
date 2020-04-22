@@ -1,0 +1,11 @@
+<!--pages/douyu/douyu.wxml-->
+
+<view>
+  <!-- 原生组件 -->
+  <!-- <view wx:for="{{roomList}}" wx:key="index" class="myRoom">
+    <image src="{{item.roomSrc}}" mode="widthFix"></image>
+    <view class="name">{{item.roomName}}</view>
+  </view> -->
+  <!-- 组件 -->
+  <my-room wx:for="{{roomList}}" wx:key="index"></my-room>
+</view>

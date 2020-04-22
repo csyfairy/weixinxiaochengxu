@@ -1,0 +1,29 @@
+<!--pages/media/media.wxml-->
+<!-- 使用音频组件播放声音 -->
+<audio id="myAudio" src="/video/audio1.mp3" controls="{{true}}" poster="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000" name="此时此刻" author="许巍"></audio>
+
+<button bindtap="play" type="primary">播放音乐</button>
+<button bindtap="pause" type="primary">暂停音乐</button>
+
+<!-- 按下这个按钮开始录音，抬起结束录音 -->
+<button 
+type="default" 
+bindtouchstart="startRecord" 
+bindtouchend="endRecord"
+class="recordBtn"
+>
+<view class="cover" style="width:{{recordTime*690/6/10}}rpx"></view>
+
+
+<view class="text">
+点击开始录音
+<text wx:if="{{recordTime}}">🔊{{recordTime / 10}}</text>
+</view>
+
+</button>
+
+<!-- 显示录音文件 -->
+<view wx:for="{{recordPath}}" wx:key="index" class="recordItem" data-path="{{item.path}}" bindtap="playRecord" style="width:{{item.time*500/6+150}}rpx">🔊 {{item.time}}秒</view>
+
+
+<navigator url="/pages/media/video/video"><button>去视频API页</button></navigator>

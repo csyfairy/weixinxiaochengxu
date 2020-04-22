@@ -1,0 +1,32 @@
+<!--pages/storage/storage.wxml-->
+<!-- 加密相册 -->
+<view class="imgBox">
+<button class="updateBtn" bindtap="updateBtn">上传图片</button>
+<!-- 图片列表 -->
+<image 
+wx:for="{{photoPaths}}" 
+src="{{item}}" wx:key="index" 
+mode="aspectFill"
+bindtap="showBig"
+data-Index="{{index}}"
+>{{item}}</image>
+</view>
+
+<!-- 大图展示的图层 -->
+<view 
+class="cover" 
+wx:if="{{showBigImg}}"
+bindtap="hideBig"
+>
+<image 
+src="{{photoPaths[currentIndex]}}" 
+mode="aspectFit"
+></image>
+<view class="remove" catchtap="removeImg">删除</view>
+<view class="prev" catchtap="prevImg">上一张</view>
+<view class="next" catchtap="nextImg">下一张</view>
+</view>
+
+<!-- bindtap事件可以冒泡：字标签点击可以触发父标签的点击事件
+    catchtap阻止冒泡：字标签点击只能触发本身的点击事件，不能触发父标签点击事件    
+ -->

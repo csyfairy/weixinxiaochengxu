@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-room": "/component/my-room/my-room"
+  },
+  "navigationBarTitleText": "斗鱼",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor" : "#eee"
+}

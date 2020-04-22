@@ -1,0 +1,17 @@
+/* pages/index6/index6.wxss */
+.wrapper{
+  padding: 10rpx 50rpx;
+  text-align: center
+}
+.input-box{
+  display: flex
+}
+.input{
+  border: 1rpx solid gray;
+  margin: 10rpx;
+  width: 300rpx
+}
+button{
+  width: 600rpx;
+  margin: 10rpx
+}

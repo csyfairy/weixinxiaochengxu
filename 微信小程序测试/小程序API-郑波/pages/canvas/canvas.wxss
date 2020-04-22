@@ -1,0 +1,10 @@
+/* pages/canvas/canvas.wxss */
+canvas{
+  background-color: rgb(209, 208, 208);
+  width: 750rpx;
+  height: 600rpx;
+}
+
+button{
+  margin: 100rpx 0;
+}

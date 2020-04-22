@@ -1,0 +1,4 @@
+<!--pages/setting/setting.wxml-->
+<text>设置页面</text>
+<navigator url="/pages/tax/tax"><button type="primary">跳转tax</button></navigator>
+<navigator url="/pages/component/component"><button type="primary">跳转</button></navigator>

@@ -1,0 +1,50 @@
+<view id="home">
+  <!-- bindtap 点击事件  -->
+  <button bindtap="btnClick" bind>事件绑定和数据渲染API</button>
+
+  <!-- app.json 中的 style："v2" 在时有效-->
+  <!-- <button>
+    <navigator url="/pages/camera/camera">相机/相册API</navigator>
+  </button> -->
+
+  <!-- 设置样式时的层级 -->
+  <navigator url="/pages/camera/camera">
+    <button>相机/相册API</button>
+  </navigator>
+  <!-- 生物认证 -->
+  <navigator url="/pages/soter/soter">
+    <button>生物认证</button>
+  </navigator>
+  <!-- 本地存储 -->
+  <navigator url="/pages/storage/storage">
+    <button>本地存储</button>
+  </navigator>
+  <!-- 二维码 -->
+  <navigator url="/pages/qrcode/qrcode">
+    <button>二维码</button>
+  </navigator>
+
+  <navigator>
+    <button open-type="share">分享API</button>
+  </navigator>
+  <!--数据请求/加载  -->
+  <navigator url="/pages/douyu/douyu">
+    <button>数据请求/加载</button>
+  </navigator>
+
+  <!-- 动画 -->
+  <navigator url="/pages/animate/animate">
+    <button>动画API</button>
+  </navigator>
+
+  <!-- canvas -->
+  <navigator url="/pages/canvas/canvas">
+    <button>canvas画布API</button>
+  </navigator>
+
+   <!-- 日志 -->
+  <navigator url="/pages/logs/logs">
+    <button>日志</button>
+  </navigator>
+
+</view>

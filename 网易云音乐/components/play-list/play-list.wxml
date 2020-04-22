@@ -1,0 +1,25 @@
+<!--components/play-list/play-list.wxml-->
+<view class="play-list-root-view" wx:if="{{playList.length>0}}" style="bottom:{{isOpen?'0':'-750rpx'}}">
+  <!-- 遮罩 -->
+  <view class="mask" style="height:{{isOpen?'400rpx':'0'}}" bindtap="openOrClose"></view>
+  <!-- 黑条 -->
+  <view class="bar" bindtap="openOrClose">
+    <image class="cd spin {{isPlaying?'running':'paused'}}" src="{{picUrl}}"></image>
+  </view>
+  <!-- 列表 -->
+  <view class="list-box">
+    <scroll-view scroll-y="{{true}}">
+      <view class="list-item" wx:for="{{playList}}" wx:key="index" bindtap="itemClick" data-index="{{index}}" data-song="{{item}}">
+        <view class="name">
+          <image class="cd spin {{isPlaying?'running':'paused'}}" wx:if="{{index == currentIndex}}" src="/images/cd.png"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="artist">
+          {{artist(item.ar)}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 演唱者名字过滤器 -->
+<wxs src="../../scripts/artist.wxs" module="artist"></wxs>

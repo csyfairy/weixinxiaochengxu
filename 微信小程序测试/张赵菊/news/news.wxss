@@ -1,0 +1,22 @@
+/* pages/news/news.wxss */
+.container{
+  padding:10rpx
+}
+.imageItem{
+  width: 150rpx;
+  height: 150rpx;
+}
+.imageBox{
+  margin: 10rpx;
+}
+.today-news{
+  display: flex;
+  align-items: center;
+}
+.date-title{
+  text-align: center;
+  background-color: rgb(0, 93, 231);
+  font-size: 45rpx;
+  line-height: 100rpx;
+  color: white;
+}

@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/media/media",
+    "pages/canvas/canvas",
+    "pages/animate/animate",
+    "pages/douyu/douyu",
+    "pages/douyu-room/douyu-room",
+    "pages/map/map",
+    "pages/qrcode/qrcode",
+    "pages/storage/storage",
+    "pages/soter/soter",
+    "pages/camera/camera",
+    "pages/data/data",
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#111111",
+    "selectedColor": "#1296db",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text" : "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home-h.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "img/find.png",
+        "selectedIconPath": "img/find-h.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "img/order.png",
+        "selectedIconPath": "img/order-h.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my-h.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}

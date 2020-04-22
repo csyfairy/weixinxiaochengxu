@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<view class="box">
+  <view class="searchBox">
+    <input placeholder="请输入歌曲或歌手。。。" bindinput="searchSuggest" value="{{val}}"></input>
+    <view style="background-image:url({{imageSearch}})"></view>
+  </view>
+  <view wx:if="{{val == ''}}" class="topSearch">
+    <view wx:for="{{searchHotList.hots}}" wx:key="index" data-hotword="{{item.first}}" bindtap="hotwordClick">{{item.first}}</view>
+  </view>
+  
+  <view wx:else class="searchSuggest">
+     <searchSuggest-item wx:for="{{searchSuggestList}}"  wx:key="index" songsList="{{item}}"></searchSuggest-item>
+  </view>
+</view>
+
+<cd-music></cd-music>

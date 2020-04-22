@@ -1,0 +1,31 @@
+/* components/cd-music/cd-music.wxss */
+.cd-music-root-view{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.cd{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.spin{
+  animation: spin 10s linear infinite;
+}
+@keyframes spin{
+  0%{transform: rotate(0)}
+  100%{transform: rotate(360deg)}
+}
+
+.running{
+  animation-play-state: running;
+}
+
+.paused{
+  animation-play-state: paused;
+}

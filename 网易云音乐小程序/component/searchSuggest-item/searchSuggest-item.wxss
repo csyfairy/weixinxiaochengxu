@@ -1,0 +1,15 @@
+/* components/searchSuggest-item/searchSuggest-item.wxss */
+.item{
+  width: 100%;
+  padding: 14rpx 35rpx;
+  border-bottom: 1rpx solid #ddd;
+  box-sizing: border-box;
+}
+.item .name{
+  color: black;
+  font-weight: bolder;
+}
+.item .singer,.item .special{
+  font-size: 25rpx;
+  color: rgb(145, 144, 144);
+}

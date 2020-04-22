@@ -1,0 +1,22 @@
+<!--component/zhihuItem/zhihuItem.wxml-->
+<view>
+  <view class="title" wx:if="{{!daysList.top_stories}}">{{time}}</view>
+  <swiper wx:if="{{daysList.top_stories}}" indicator-dots="true" indicator-active-color="white" autoplay="true" circular="true">
+    <swiper-item wx:for="{{daysList.top_stories}}" bindtap="zhihuNews" wx:key="index" data-name="{{item.title}}" data-url="{{item.url}}">
+      <view class="box">
+        <view class="text">{{item.title}}</view>
+        <image src="{{item.image}}"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="ul">
+    <view class="li" bindtap="zhihuNews" wx:for="{{daysList.stories}}" wx:key="index" data-name="{{item.title}}" data-url="{{item.url}}">
+      <view class="left">
+        <image mode="widthFix" src="{{item.images[0]}}"></image>
+      </view>
+      <view class="right">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+</view>

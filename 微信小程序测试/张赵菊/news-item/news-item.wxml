@@ -1,0 +1,10 @@
+<!--component/news-item/news-item.wxml-->
+<view bindtap="enterDetail" data-url="{{item.url}}">
+<view class="date-title" wx:if="{{index % 6==0}}">{{timeArr[index/6].month}}月{{timeArr[index/6].thisdate}}日</view>
+<view class="today-news">
+<view class="imageBox">
+<image class="imageItem" src="{{item.images[0]}}"></image>
+</view>
+<view>{{item.title}}</view>
+</view>
+</view>

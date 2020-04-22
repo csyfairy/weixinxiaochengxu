@@ -1,0 +1,16 @@
+<!--pages/canvas/canvas.wxml-->
+<button type="primary" bindtap="drawLine">画线段</button>
+<button type="primary" bindtap="drawRect">画矩形</button>
+<button type="primary" bindtap="drawCircle">画圆弧</button>
+<button type="primary" bindtap="drawCurveBtn">画曲线</button>
+<view wx:if="{{bezierSlider}}">
+  <slider bindchanging="bezier1" min="30" max="500" value="40"></slider>
+  <slider bindchanging="bezier2" min="30" max="500" value="300"></slider>
+  <slider bindchanging="bezier3" min="30" max="500" value="310"></slider>
+  <slider bindchanging="bezier4" min="30" max="500" value="80"></slider>
+</view>
+<button type="primary" bindtap="drawText">画文字</button>
+<button type="primary" bindtap="drawImage">画图片</button>
+<button type="primary" bindtap="drawPolygon">画多边形</button>
+<slider wx:if="{{polygonSlider}}" bindchanging="polygonChange"></slider>
+<canvas canvas-id="myCanvas"></canvas>

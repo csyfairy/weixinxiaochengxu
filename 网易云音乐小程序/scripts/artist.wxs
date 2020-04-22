@@ -1,0 +1,10 @@
+// 把演唱者拼接起来
+function artist(arr) {
+  if (arr) {
+    return arr.map(function (art) {
+      return art.name;
+    }).join(",  ");
+  }
+  return "未知";
+}
+module.exports = artist;

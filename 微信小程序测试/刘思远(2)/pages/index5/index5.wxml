@@ -1,0 +1,6 @@
+<!--pages/index5/index5.wxml-->
+<navigator url="../index4/index4" open-type="navigate" >index4</navigator>
+<navigator url="../index4/index4" open-type="redirect">index4</navigator>
+<navigator url="../index/index" open-type="switchTab">index4</navigator>
+<navigator url="../index4/index4" open-type="reLaunch">index4</navigator>
+<video src="./01-课程介绍.mp4" duration="300" danmu-btn danmu-list="{{danmuList}}" enable-danmu controls></video>

@@ -1,0 +1,15 @@
+<!--component/my-swiper/my-swiper.wxml-->
+
+<swiper 
+indicator-dots="{{true}}"
+autoplay="{{true}}"
+indicator-active-color="#eee"
+interval="{{3000}}"
+circular="{{true}}"
+>
+<swiper-item wx:for="{{swiperList}}" wx:key="index" data-url="{{item.url}}" bindtap="enterRoom">
+<view class="swiper-title">{{item.title}}</view>
+<image class="swiper-image" mode="aspectFill" src="{{item.image}}"></image>
+</swiper-item>
+</swiper>
+

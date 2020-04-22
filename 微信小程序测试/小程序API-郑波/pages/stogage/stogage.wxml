@@ -1,0 +1,19 @@
+<!--pages/stogage/stogage.wxml-->
+<!-- 相册 -->
+<view class="imgBox">
+<!-- 上传图片的按钮 -->
+   <button class="updataBtn" bindtap="updataBtn">上传图片</button>
+   <!-- 图片列表 -->
+   <image wx:for="{{photoPath}}" src="{{item}}" wx:key="index" mode="aspectFill"    bindtap="showBig" data-url="{{index}}"></image>
+</view>
+
+<!-- 大图展示的涂层 -->
+<view class="cover" wx:if="{{showpge}}" bindtap="hideBig">
+   <image mode="aspectFill" src="{{photoPath[currentIndex]}}"></image>
+   <view class="remove" catchtap="removeImg">删除</view>
+   <view class="prev" catchtap="prevImg">上一张</view>
+   <view class="next" catchtap="nextImg">下一张</view>
+</view>
+
+<!-- bindtap 事件可以冒泡:字标签点击可以触发父标签的点击事件
+    catchtap  阻止冒泡:子标签点击只能触发本身的点击事件,不能触发父标签的点击事件 -->

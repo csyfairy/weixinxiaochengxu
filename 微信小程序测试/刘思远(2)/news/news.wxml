@@ -1,0 +1,23 @@
+<view>
+  <view>
+    <swiper autoplay indicator-dots circular indicator-active-color="white">
+      <swiper-item wx:for="{{top_stories}}" wx:key="*this">
+        <navigator url="/pages/news-detail/news-detail?url={{item.url}}">
+          <image src="{{item.image}}" mode="aspectFill"></image>
+          <text class="swiper-title">{{item.title}}</text>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view wx:for="{{stories}}" wx:key="index" bindtap="geDetail" data-url="{{item.url}}">
+    <view class="news-date" wx:if="{{(index - 4) % 6 == 0 && dateList[(index-4)/6]}}">{{dateList[(index-4)/6]}}</view>
+    <view class="news-list">
+      <view class="image-box">
+        <image src="{{item.images[0]}}" mode="aspectFill"></image>
+      </view>
+      <view class="list-title">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+</view>

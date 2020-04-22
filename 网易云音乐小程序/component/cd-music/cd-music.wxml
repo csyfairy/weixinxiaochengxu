@@ -1,0 +1,4 @@
+<!--components/cd-music/cd-music.wxml-->
+<view class="cd-mucsic-root-view" bindtap="musicClick">
+  <image class="cd spin {{isPlaying?'running':'paused'}}"  src="{{url}}"></image>
+</view>

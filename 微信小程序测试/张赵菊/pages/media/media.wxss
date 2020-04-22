@@ -1,0 +1,34 @@
+/* pages/media/media.wxss */
+#myAudio,button{
+  margin: 30rpx;
+}
+.recordItem{
+  width: 500rpx;
+  height: 80rpx;
+  margin: 30rpx;
+  background-color: #999;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+}
+button text{
+  display: inline-block;
+  width: 140rpx;
+  text-align: left;
+  white-space: nowrap;
+}
+button .cover{
+  height: 100%;
+  background-color: #06ff34;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+.recordBtn{
+position: relative;
+}
+button .text{
+  position: relative;
+  z-index: 100;
+}

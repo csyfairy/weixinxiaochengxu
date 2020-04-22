@@ -1,0 +1,39 @@
+<!--pages/register/register.wxml-->
+<view class="regist-root-view">
+  <!-- 手机号/邮箱 -->
+  <view class="form-line">
+    <label>手机</label>
+    <input type="number" placeholder="请输入手机号" bindblur="phoneInput"></input>
+  </view>
+  <view class="pass" wx:if="{{phoneState==1}}">✔手机号可用</view>
+  <view class="noPass" wx:if="{{phoneState==2}}">⚔请填入正确的手机号</view>
+  
+  <!-- 密码 -->
+  <view class="form-line">
+    <label>密码</label>
+    <input type="password" placeholder="请输入密码" bindblur="passwordInput"></input>
+  </view>
+  <view class="pass" wx:if="{{passwordState==1}}">✔密码可用</view>
+  <view class="noPass" wx:if="{{passwordState==2}}">⚔密码必须以字母开头且长度在6-15位之间,可以包含._</view>
+
+  <!-- 昵称 -->
+  <view class="form-line">
+    <label>昵称</label>
+    <input type="text" placeholder="请输入用户名" bindinput="nameInput"></input>
+  </view>
+  <view class="noPass" wx:if="{{nameState == 2}}">⚔昵称不能为空</view>
+  
+  <!-- 验证码 -->
+  <view class="form-line">
+    <view>
+      <view class="tap">请输入手机验证码</view>
+      <input type="number" maxlength="{{4}}" class="codeInput" bindinput="codeInput" disabled="{{codeInputDisabled}}"></input>
+    </view>
+    <button class="codeBtn" disabled="{{codeBtnDisabled}}" bindtap="getCode">获取验证码 <text wx:if='{{codeTimer}}'>{{codeTimer}}s</text> </button>
+  </view>
+  
+  <!-- 注册 -->
+  <view>
+    <button type="primary" bindtap="registTap" disabled="{{registBtnDisabled}}">注册</button>
+  </view>  
+</view>

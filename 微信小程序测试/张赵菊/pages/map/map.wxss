@@ -1,0 +1,131 @@
+/* pages/map/map.wxss */
+map{
+  width: 100vw;
+  height: 100vh;
+}
+.temp{
+  width: 10vw;
+  height: 5vh;
+  background-color: #00f;
+}
+.boxBtn{
+  position: absolute;
+  left: 20rpx;
+  bottom: 300rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+.posBtn{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 300rpx;
+  border-radius: 50%;
+
+}
+.posBtn:active{
+  opacity: 0.5
+}
+.bigger{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 300rpx;
+  background-color: #fff;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx
+}
+.smaller{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 230rpx;
+  background-color: #fff;
+  font-size: 80rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx
+}
+.bigger:active,.smaller:active{
+  background-color: gray;
+}
+.ruler{
+  width: 100rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 180rpx;
+}
+.hr{
+  width: 120rpx;
+  height: 20rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 150rpx;
+  /* cover-view在安卓真机测试时，不显示边框，可以用背景图拼接实现 */
+  border-left: 3rpx solid;
+  border-right: 3rpx solid;
+  border-bottom: 3rpx solid;
+}
+.traffic{
+  width: 80rpx;
+  height: 80rpx;
+  right: 15rpx;
+  position: absolute;
+  top: 400rpx;
+}
+.satellite{
+  width: 80rpx;
+  height: 80rpx;
+  right: 15rpx;
+  position: absolute;
+  top: 320rpx;
+  border-radius: 10rpx;
+}
+.mapInput{
+  position: absolute;
+  top: 50rpx;
+}
+.input-view{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 460rpx;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+}
+.search-btn{
+  position: absolute;
+  top: 30rpx;
+  left: 580rpx;
+  width: 140rpx;
+  height: 80rpx;
+  background-color: #149aaf;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.mapInput{
+  position: absolute;
+  top: -200rpx;
+  background-color: red;
+}
+.searchBox{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 130rpx;
+}

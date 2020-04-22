@@ -1,0 +1,26 @@
+<!--pages/douyu/douyu.wxml-->
+<!-- 使用自定义组件 -->
+
+<!-- <my-room innerText="123">张三插槽</my-room> -->
+<view>
+  <!-- 使用原生组件实现房间展示 -->
+  <!-- <view wx:for="{{roomList}}" wx:key="index" class="myRoom">
+    <image mode="widthFix" src="{{item.roomSrc}}"></image>
+    <view class="name">{{item.roomName}}</view>
+  </view> -->
+
+  <!-- 使用自定义组件完成房间展示 -->
+  <my-room wx:for="{{roomList}}" wx:key="index" room="{{item}}">张三插槽</my-room>
+
+</view>
+
+<!-- 小程序自定义组件的使用
+     1,创建组件 component/my-room/my-room
+     2,在my-room.json中声明组件 "component":true
+     3,在my-room.js中 使用 Component() 构造器注册组件
+     4,在douyu.json中引入组件
+     "usingComponents": {
+    "my-room": "/component/my-room/my-room"
+  },
+     5.在douyu.wxml直接使用,通过自定义属性和slot插槽传值
+      -->

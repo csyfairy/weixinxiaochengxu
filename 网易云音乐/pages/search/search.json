@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "search-result": "../../components/search-result/search-result",
+    "cd-music": "../../components/cd-music/cd-music"
+  },
+  "navigationBarTitleText": "搜索",
+  "onReachBottomDistance": 50
+}

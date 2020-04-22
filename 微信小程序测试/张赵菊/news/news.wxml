@@ -1,0 +1,27 @@
+<!--pages/news/news.wxml-->
+<view class="container">
+<my-swiper class="my-swiper" swiperList="{{swiperList}}"></my-swiper>
+<!-- 今天新闻列表 -->
+<view class="today">
+<view wx:for="{{newsList}}" wx:key="index" class="today-news" bindtap="enterDetail" data-url="{{item.url}}">
+<view class="imageBox">
+<image class="imageItem" mode="aspectFill" src="{{item.images[0]}}"></image>
+</view>
+<view>{{item.title}}</view>
+</view>
+</view>
+
+
+<!-- before数据 -->
+<view>
+<!-- <view class="date-title">{{month}}月{{thisdate}}日</view> -->
+<news-item wx:for="{{beforeData}}" wx:key="index" item="{{item}}" index="{{index}}" timeArr="{{timeArr}}">
+
+</news-item>
+
+</view>
+
+
+
+</view>
+

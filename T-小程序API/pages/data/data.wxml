@@ -1,0 +1,74 @@
+<view class="root">
+  <!--pages/data/data.wxml-->
+  <text>-----1,输入框的双向数据绑定-----</text>
+  <!--  bindinput绑定输入事件 -->
+  <input class="input" value="{{count}}" bindinput="myInput"></input>
+  <view class="input-view"> 输入框绑定的数据是: {{count}} </view>
+  
+  <text>-----2,按钮的事件绑定-----</text>
+  <button bindtap="add" type="primary">点击数字+1</button>
+
+  <text>-----3,条件渲染-----</text>
+  <!-- 条件渲染  :  wx:if 相当于vue中的 v-if -->
+  <view wx:if="{{isShow}}">是否显示这个标签</view>
+  <view wx:if="{{count % 2 == 0}}">当前输入的数字是偶数</view>
+  <view wx:else>当前输入的数字是奇数</view>
+
+  <text>-----4,列表渲染-----</text>
+  <!-- 列表渲染  wx:for 相当于vue中的 v-for-->
+  <view wx:for="{{nameList}}" wx:key="index"> 
+    {{index}} : {{item}}
+  </view>
+  <!-- wx:for循环只写列表, 会默认创建item和index变量, 直接使用即可-->
+  <!-- 可以通过wx:for-item属性修改item变量名, 通过wx:for-index修改index变量名 -->
+  <view wx:for="{{nameList}}" wx:for-item="name" wx:for-index="i" wx:key="i" >
+    {{i}} : {{name}}
+  </view>
+  <!-- 如果循环的标签是并列的多个标签,就用block标签包裹,把循环卸载block上,block不会被渲染 -->
+  <block wx:for="{{nameList}}" wx:key="index">
+    <label>索引是: {{index}}</label>
+    <view>姓名是: {{item}}</view >
+  </block>
+
+
+  <text>-----5,滚动选择器-----</text>
+  <!-- picker 滚动选择器 -->
+  <picker mode="selector" range="{{nameList}}" bindchange="nameChange">
+    <button type="primary">选择名字:{{nameList[index]}}</button>
+  </picker>
+
+  <text>-----6,时间选择器-----</text>
+  <picker value='{{time}}' mode="time" start="09:00" end="18:00" bindchange="timeChange">
+    <button type="primary">选择时间:{{time}}</button>
+  </picker>
+
+  <text>-----7,日期选择器-----</text>
+  <picker value='{{date}}' mode="date" bindchange="dateChange">
+    <button type="primary">{{date}}</button>
+  </picker>
+
+  <text>-----8,省市区选择器-----</text>
+  <picker value='{{region}}' mode="region" bindchange="regionChange">
+    <button type="primary">{{region}}</button>
+  </picker>
+  
+  <text>-----9,自定义省市区选择器-----</text>
+  <view>地址:{{provinces[indexs[0]].name}}-{{cities[indexs[1]].name}}-{{areas[indexs[2]].name}}</view>
+  <picker-view value="{{indexs}}" bindchange="areaChoose" indicator-style="height: 50px;">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="index" >{{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{cities}}" wx:key="index" >{{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" wx:key="index" >{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+  
+</view>
+
+
+
+
+

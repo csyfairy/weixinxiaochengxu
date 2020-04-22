@@ -1,0 +1,50 @@
+/* components/recommend-music/recommend-music.wxss */
+.recommend-title{
+  background-color: #eee;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 30rpx;
+}
+
+.list-box{
+  margin: 10rpx 20rpx;
+}
+.artists{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+.list-item{
+  display: flex;
+  height: 200rpx;
+}
+
+.pic{
+  width: 200rpx;
+  height: 200rpxl;
+}
+
+.pic image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.info-box{
+  padding-left: 10rpx;
+}
+
+.info-box view{
+  margin: 10rpx 0;
+}
+
+.name{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.artists,.album{
+  font-size: 30rpx;
+  color: #666;
+}
+

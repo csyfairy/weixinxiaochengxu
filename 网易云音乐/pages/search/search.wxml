@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="search-root-view">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <view class="search-line">
+      <input placeholder="请输入歌曲或歌手。。。" bindinput="keywordChange" value="{{keyword}}"></input>
+      <image src="/images/search.png"></image>
+    </view>
+  </view>
+  <!-- 条件渲染：热搜关键字和搜索结果 -->
+  <search-result wx:if="{{resultList.length>0}}" resultList="{{resultList}}">
+  </search-result>
+  <view class="hotword-box" wx:else>
+    <text class="hotword" wx:for="{{hotword}}" wx:key="index" data-hotword="{{item.first}}" bindtap="hotwordClick">{{item.first}}</text>
+  </view>
+  <!-- CD小浮标 -->
+  <cd-music></cd-music>
+</view>

@@ -1,0 +1,11 @@
+#home button {
+  width: 700rpx;
+  border: 1rpx solid #666;
+  color: #333;
+  margin: 80rpx auto;
+}
+
+navigator {
+  margin: auto;
+  width: 700rpx;
+}

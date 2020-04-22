@@ -1,0 +1,138 @@
+/* pages/player/player.wxss */
+
+.player-root-view {
+  background-color: #800000;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.song-info {
+  height: 50vh;
+  box-shadow: 0 0 10rpx 0 red;
+  position: relative;
+}
+
+.pic-box {
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic-box image {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.lyric-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 1s;
+  top: 0;
+  left: 0;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.noLyric {
+  margin: 250rpx auto;
+  font-size: 50rpx;
+  color: greenyellow;
+}
+
+.scroll {
+  width: 800rpx;
+  height: 100%;
+  padding: 10rpx 10rpx;
+  font-size: 33rpx;
+  box-sizing: border-box;
+}
+
+.lyric-line {
+  margin: 35rpx 0;
+}
+
+.lyric-line-active {
+  transform: scale(1.5, 1.5);
+  color: greenyellow;
+  text-shadow: 0 0 10rpx white;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+
+.song-name {
+  margin: 15rpx 0;
+}
+
+.name {
+  font-size: 40rpx;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.artist {
+  font-size: 30rpx;
+  color: #eee;
+  width: 80%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.control{
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ctl-btn{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.ctl-btn:active{
+  opacity: 0.7;
+}
+
+.type-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.type-btn{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.type-btn-active{
+  width: 60rpx;
+  height: 60rpx;
+  border: 4rpx solid #dcffda;
+  border-radius: 50%;
+  padding: 15rpx;
+}
+
+.type-btn-star{
+  width: 70rpx;
+  height: 70rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/qrcode/qrcode.wxml-->
+<input  placeholder="请输入二维码信息" bindinput="updateMsg"></input>
+<button type="primary" bindtap="makeQRCode">生成二维码</button>
+<button bindtap="scanQRCode" type="primary">扫描二维码</button>
+
+<!-- 展示扫描结果 -->
+<view wx:if="{{codeInfo}}">扫码结果：{{codeInfo}}</view>
+
+
+<!-- 创建画布标签canvas，用于绘制二维码canvas-id属性对应二维码的id名，会自动绘制二维码 -->
+<canvas canvas-id="myQRCode" bindlongtap="saveQRCode" wx:if="{{showQRCode}}"></canvas>
+<view wx:if="{{showQRCode}}">长按保存二维码</view>

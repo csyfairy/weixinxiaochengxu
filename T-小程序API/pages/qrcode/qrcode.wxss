@@ -1,0 +1,23 @@
+/* pages/qrcode/qrcode.wxss */
+input{
+  width: 600rpx;
+  height: 80rpx;
+  margin: 75rpx;
+  padding-left: 10rpx;
+  line-height: 80rpx;
+  border: 1rpx solid gray;
+  border-radius: 12rpx;
+}
+button{
+  width: 600rpx;
+  margin: 40rpx auto;
+}
+canvas{
+  width: 200px;
+  height: 200px;
+  margin: 30rpx auto;
+}
+view{
+  text-align: center;
+  color: #aaa;
+}

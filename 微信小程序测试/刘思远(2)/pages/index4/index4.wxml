@@ -1,0 +1,10 @@
+<view class="box1"></view>
+<view class="colorBlue">变蓝</view>
+<view style="background-color:yellow;color:{{myColor}}">sytle</view>
+<view class="{{myClass}}">类名</view>
+<view hover-class="hover_class">按下样式</view>
+<view>
+  <text selectable>text文本</text>
+  <text decode>普通&nbsp;文本</text>
+  <navigator open-type="navigateBack">返回上一级</navigator>
+</view>

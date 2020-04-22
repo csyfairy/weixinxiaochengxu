@@ -1,0 +1,14 @@
+<!--pages/map/map.wxml-->
+<map id="myMap"
+longitude="{{longitude}}"
+latitude="{{latitude}}" 
+show-compass="{{false}}" 
+show-location="{{true}}"
+enable-overlooking="{{true}}"
+enable-rotate="{{true}}"
+
+>
+</map>
+
+<cover-image class="posBtn" src="/img/pos.png">
+</cover-image>
